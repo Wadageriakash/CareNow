@@ -1,0 +1,59 @@
+/* Container for the entire login box */
+.loginBox {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 30px;
+  margin: 50px auto; /* Centers the box and adds vertical margin */
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: gainsboro;
+  font-family: sans-serif; /* Optional: improve font consistency */
+  height: 400px;
+  gap: 53px;
+  flex-wrap: wrap;
+}
+
+/* Form container */
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form elements */
+}
+
+/* Individual form group (label + input) */
+.formGroup {
+  margin-bottom: 10px; /* Space between groups if not using gap on form */
+}
+
+.loginBox label {
+  display: block; /* Make labels take their own line */
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.loginBox input[type="email"],
+.loginBox input[type="password"] {
+  width: calc(100% - 22px); /* Adjust for padding and border */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+.loginBox button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+   
+}
+
+.loginBox button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

@@ -1,0 +1,162 @@
+/* Navbar.css */
+
+/* Basic Navbar Styling (adjust as needed for your design) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  /* background-color: #002D62;  */
+  background-color: #011627;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.search-icon {
+  margin-right: 10px;
+  display: flex; /* To vertically center the SVG */
+  align-items: center;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 0;
+  font-size: 1rem;
+  
+}
+
+/* Nav Links Styling */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px; /* Space between main nav items */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+  cursor: pointer; 
+}
+
+.nav-links li a:hover {
+  color: #555;
+}
+
+/* Dropdown Container Styling */
+.dropdown-container {
+  position: relative; /* Essential: Makes dropdown-menu position absolutely relative to this */
+  cursor: pointer;
+}
+
+.dropdown-toggle::after {
+  /* Simple caret for dropdowns */
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Position right below the parent item */
+  left: 0;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+   background-color: #34495e;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 200px; /* Adjust as needed */
+  z-index: 1000; /* Ensure it appears above other content */
+
+  /* Initial state: hidden */
+  display: none; /* Hide by default */
+  opacity: 0;
+  transform: translateY(10px); /* Small offset for animation */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+  visibility: hidden; /* Hide for screen readers and pointer events */
+  pointer-events: none; /* Prevents interaction when hidden */
+}
+
+.dropdown-menu.show { /* Add 'show' class to dropdown-menu when it's open */
+  display: block; /* Ensure it's displayed */
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+  background-color: white;
+}
+
+
+.dropdown-menu li a {
+  display: block; /* Make links take full width of the dropdown item */
+  padding: 8px 15px;
+  /* color: white; */
+  text-decoration: none;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.dropdown-menu li a:hover {
+  background-color: #555;; /* Highlight dropdown item on hover */
+  color: #007bff;
+}
+
+.sidenav {
+  width: 240px;
+  background: #011627;
+  position: absolute;
+  height: 95vh;
+  padding: 0 30px;
+  left: -100%;
+  transition: all 0.3s;
+}
+
+.sidenav.acttive{
+left: 0;
+}
+.sidenav ul {
+  padding: 0;
+}
+
+.sidenav ul li {
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+.sidenav ul li a {
+  color: #eaecef;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+.sidenav ul li a:hover,
+.sidenav ul li a.active {
+  background: #172b4d;
+
+}
+
+.sidenav ul li a svg{
+  margin-right: 10px;
+}
